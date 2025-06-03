@@ -3,7 +3,7 @@ import Footer from "../Componets/Footer/Footer";
 import Navbar from "../Componets/Navbar/Navbar";
 import ServiceCenterCard from "../Componets/ServiceCenterCard/ServiceCenterCard";
 import Link from "next/link";
-import StatsOfNumbers from "@/Componets/StatsOfNumbers/StatsOfNumbers";
+import StatsOfNumbers from "../Componets/StatsOfNumbers/StatsOfNumbers";
 
 export default function PrivacyPolicyPage() {
   return (
