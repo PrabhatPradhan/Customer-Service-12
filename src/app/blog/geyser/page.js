@@ -6,21 +6,24 @@ export default function CardsPage() {
     {
       title: "Refrigerator Repair Guide",
       slug: "refrigerator-repair-guide",
-      image: "https://starappliancerepaircc.com/wp-content/uploads/2024/03/The-Essential-Guide-to-Appliance-Repair-Troubleshooting-Maintenance-and-Hiring-Professionals.jpg",
+      image:
+        "https://starappliancerepaircc.com/wp-content/uploads/2024/03/The-Essential-Guide-to-Appliance-Repair-Troubleshooting-Maintenance-and-Hiring-Professionals.jpg",
       description:
         "A comprehensive guide to diagnosing and fixing common issues with household refrigerators. From faulty thermostats to broken door seals, this guide covers all the basics you need to get your fridge running efficiently again.",
     },
     {
       title: "Air Conditioner Maintenance Tips",
       slug: "air-conditioner-maintenance-tips",
-      image: "https://sp-ao.shortpixel.ai/client/to_webp,q_glossy,ret_img/https://www.asap-appliance-repair.com/wp-content/uploads/2019/06/DIshwasher.jpg",
+      image:
+        "https://sp-ao.shortpixel.ai/client/to_webp,q_glossy,ret_img/https://www.asap-appliance-repair.com/wp-content/uploads/2019/06/DIshwasher.jpg",
       description:
         "Keep your AC running like new with our expert maintenance tips. Learn how to clean filters, check refrigerant levels, and avoid common issues that reduce performance and raise electricity bills.",
     },
     {
       title: "Washing Machine Troubleshooting",
       slug: "washing-machine-troubleshooting",
-      image: "https://img.freepik.com/premium-photo/young-handsome-repairman-worker-suit-with-professional-tools-box-is-fixing-washing-machine-bathroom_283617-2848.jpg?w=360",
+      image:
+        "https://img.freepik.com/premium-photo/young-handsome-repairman-worker-suit-with-professional-tools-box-is-fixing-washing-machine-bathroom_283617-2848.jpg?w=360",
       description:
         "Understand why your washing machine won’t start, spin, or drain. This guide provides step-by-step fixes for common washer issues and helps you decide when it's time to call a professional.",
     },
@@ -37,27 +40,25 @@ export default function CardsPage() {
     <div className="max-w-6xl mx-auto px-4 py-10">
       <h1 className="text-3xl font-bold text-center mb-10">Our Repair Guides</h1>
       <div className="grid sm:grid-cols-2 lg:grid-cols-2 gap-8">
-        {cards.map((card, index) => (
-           <Link
-           href={`/blog/geyser/${card.slug}`}
-           >
-          <div
-            key={index}
-            className="bg-white rounded-2xl shadow-md overflow-hidden hover:shadow-lg transition"
+        {cards.map((card) => (
+          <Link
+            href={`/blog/geyser/${card.slug}`}
+            key={card.slug}
+            className="block"
           >
-            <img
-              src={card.image}
-              alt={card.title}
-              className="w-full h-56 object-cover"
-            />
-            <div className="p-6 flex flex-col justify-between h-full">
-              <div>
-                <h2 className="text-2xl font-semibold mb-3">{card.title}</h2>
-                <p className="text-gray-700 mb-4">{card.description}</p>
+            <div className="bg-white rounded-2xl shadow-md overflow-hidden hover:shadow-lg transition cursor-pointer">
+              <img
+                src={card.image}
+                alt={card.title}
+                className="w-full h-56 object-cover"
+              />
+              <div className="p-6 flex flex-col justify-between h-full">
+                <div>
+                  <h2 className="text-2xl font-semibold mb-3">{card.title}</h2>
+                  <p className="text-gray-700 mb-4">{card.description}</p>
+                </div>
               </div>
-               
             </div>
-          </div>
           </Link>
         ))}
       </div>

@@ -34,33 +34,28 @@ export default function WashingMachineCards() {
   ];
 
   return (
-    <div className="max-w-6xl mx-auto px-4 py-10">
-      <h1 className="text-3xl font-bold text-center mb-10">Washing Machine Guides</h1>
-      <div className="grid sm:grid-cols-2 lg:grid-cols-2 gap-8">
-        {cards.map((card, index) => (
-           <Link
-           href={`/blog/washing-machine/${card.slug}/`}
-              >
-          <div
-            key={index}
-            className="bg-white rounded-2xl shadow-md overflow-hidden hover:shadow-lg transition"
+    <div className={"max-w-6xl mx-auto px-4 py-10"}>
+      <h1 className={"text-3xl font-bold text-center mb-10"}>{"Washing Machine Guides"}</h1>
+      <div className={"grid sm:grid-cols-2 lg:grid-cols-2 gap-8"}>
+        {cards.map((card) => (
+          <Link
+            href={`/blog/washing-machine/${card.slug}/`}
+            key={card.slug}
+            className={"block"}
           >
-            <img
-              src={card.image}
-              alt={card.title}
-              className="w-full h-56 object-cover"
-            />
-            <div className="p-6 flex flex-col justify-between h-full">
-              <div>
-                <h2 className="text-2xl font-semibold mb-3">{card.title}</h2>
-                <p className="text-gray-700 mb-4">{card.description}</p>
+            <div className={"bg-white rounded-2xl shadow-md overflow-hidden hover:shadow-lg transition cursor-pointer"}>
+              <img
+                src={card.image}
+                alt={card.title}
+                className={"w-full h-56 object-cover"}
+              />
+              <div className={"p-6 flex flex-col justify-between h-full"}>
+                <div>
+                  <h2 className={"text-2xl font-semibold mb-3"}>{card.title}</h2>
+                  <p className={"text-gray-700 mb-4"}>{card.description}</p>
+                </div>
               </div>
-             
-                
-              
             </div>
-            
-          </div>
           </Link>
         ))}
       </div>
