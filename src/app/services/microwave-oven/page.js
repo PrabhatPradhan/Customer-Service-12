@@ -5,7 +5,8 @@ import StatsOfNumbers from "../../Componets/StatsOfNumbers/StatsOfNumbers";
 import Footer from "../../Componets/Footer/Footer";
 
 export default function Page() {
-  const [selectedImage, setSelectedImage] = useState(images[0]);
+  const selectedImage =
+    "https://www.lg.com/content/dam/channel/wcms/in/images/microwave-ovens/mc2886brum_dbkqiln_eail_in_c/gallery/MC2886BRUM-Microwave-ovens-Front-view-DZ-01.jpg";
   const [isBookingOpen, setIsBookingOpen] = useState(false);
 
   const handleOpenBooking = () => setIsBookingOpen(true);
@@ -176,7 +177,3 @@ export default function Page() {
     </>
   );
 }
-
-const images = [
-  "https://www.lg.com/content/dam/channel/wcms/in/images/microwave-ovens/mc2886brum_dbkqiln_eail_in_c/gallery/MC2886BRUM-Microwave-ovens-Front-view-DZ-01.jpg",
-];

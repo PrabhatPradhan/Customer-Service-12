@@ -5,7 +5,7 @@ import StatsOfNumbers from "../../Componets/StatsOfNumbers/StatsOfNumbers";
 import Footer from "../../Componets/Footer/Footer";
 
 export default function Page() {
-  const [selectedImage, setSelectedImage] = useState(images[0]);
+  const selectedImage = "https://havells.com/media/catalog/product/cache/844a913d283fe95e56e39582c5f2767b/g/l/gl43u4d2ef_front.jpg";
   const [isBookingOpen, setIsBookingOpen] = useState(false);
 
   const handleOpenBooking = () => setIsBookingOpen(true);
@@ -209,7 +209,3 @@ export default function Page() {
     </>
   );
 }
-
-const images = [
-  "https://havells.com/media/catalog/product/cache/844a913d283fe95e56e39582c5f2767b/g/l/gl43u4d2ef_front.jpg",
-];

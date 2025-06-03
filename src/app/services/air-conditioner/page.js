@@ -1,12 +1,15 @@
 "use client";
-import React, { useState } from "react";
+import React from "react";
 import Navbar from "../../Componets/Navbar/Navbar";
 import StatsOfNumbers from "../../Componets/StatsOfNumbers/StatsOfNumbers";
 import Footer from "../../Componets/Footer/Footer";
 
+// ✅ Just use a simple constant
+const selectedImage =
+  "https://5.imimg.com/data5/SELLER/Default/2025/3/494009823/CH/DI/DI/81272504/2tr-75500-voltas-fac-241-cz2mm-r32-500x500.jpg";
+
 export default function Page() {
-  const [selectedImage, setSelectedImage] = useState(images[0]);
-  const [isBookingOpen, setIsBookingOpen] = useState(false);
+  const [isBookingOpen, setIsBookingOpen] = React.useState(false);
 
   const handleOpenBooking = () => setIsBookingOpen(true);
   const handleCloseBooking = () => setIsBookingOpen(false);
@@ -211,7 +214,3 @@ export default function Page() {
     </>
   );
 }
-
-const images = [
-  "https://5.imimg.com/data5/SELLER/Default/2025/3/494009823/CH/DI/DI/81272504/2tr-75500-voltas-fac-241-cz2mm-r32-500x500.jpg",
-];
