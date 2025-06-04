@@ -1,7 +1,11 @@
+import Footer from "../../../Componets/Footer/Footer";
+import Navbar from "../../../Componets/Navbar/Navbar";
 import Image from "next/image";
 
 export default function Page() {
   return (
+   <>
+   <Navbar/>
     <div className="min-h-screen bg-gray-100 py-12 px-6 lg:px-24">
       <div className="max-w-5xl mx-auto bg-white shadow-2xl rounded-3xl overflow-hidden">
         <Image
@@ -58,5 +62,7 @@ export default function Page() {
         </div>
       </div>
     </div>
+    <Footer/>
+   </>
   );
 }

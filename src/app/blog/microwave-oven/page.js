@@ -1,6 +1,8 @@
 "use client";
 import Link from "next/link";
 import Image from "next/image";
+import Navbar from "../../Componets/Navbar/Navbar"
+import Footer from "../../Componets/Footer/Footer";
 export default function MicrowaveOvenCards() {
   const cards = [
     {
@@ -38,7 +40,9 @@ export default function MicrowaveOvenCards() {
   ];
 
   return (
-    <div className="max-w-6xl mx-auto px-4 py-10">
+   <>
+   <Navbar/>
+    <div className="max-w-6xl mx-auto px-4 mt-12 py-10">
       <h1 className="text-3xl font-bold text-center mb-10">
         Microwave Oven Guides
       </h1>
@@ -72,5 +76,7 @@ export default function MicrowaveOvenCards() {
         ))}
       </div>
     </div>
+    <Footer/>
+   </>
   );
 }

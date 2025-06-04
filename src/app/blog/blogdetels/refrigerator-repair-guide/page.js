@@ -1,6 +1,10 @@
+import Footer from "../../../Componets/Footer/Footer";
+import Navbar from "../../../Componets/Navbar/Navbar"
 export default function BlogDetailPage() {
   return (
-    <div className="min-h-screen bg-gray-100 py-12 px-6 lg:px-24">
+  <>
+  <Navbar/>
+    <div className="min-h-screen bg-gray-100 py-12 px-6 mt-12 lg:px-24">
       <div className="max-w-5xl mx-auto bg-white shadow-2xl rounded-3xl overflow-hidden">
         <img
           src="https://5.imimg.com/data5/SELLER/Default/2022/2/GE/JW/SY/25289616/front-loading-washing-machine-repair-service.png"
@@ -46,5 +50,7 @@ export default function BlogDetailPage() {
         </div>
       </div>
     </div>
+    <Footer/>
+  </>
   );
 }

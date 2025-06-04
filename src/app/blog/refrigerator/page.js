@@ -3,6 +3,8 @@
 import Link from "next/link";
  
 import Image from 'next/image';
+import Footer from "../../Componets/Footer/Footer";
+import Navbar from "../../Componets/Navbar/Navbar"
 export default function CardsPage() {
   const cards = [
     {
@@ -37,7 +39,9 @@ export default function CardsPage() {
   ];
 
   return (
-    <div className="max-w-6xl mx-auto px-4 py-10">
+    <>
+    <Navbar/>
+    <div className="max-w-6xl mx-auto mt-12 px-4 py-10">
       <h1 className="text-3xl font-bold text-center mb-10">Our Repair Guides</h1>
       <div className="grid sm:grid-cols-2 lg:grid-cols-2 gap-8">
         {cards.map((card, index) => (
@@ -62,5 +66,7 @@ export default function CardsPage() {
         ))}
       </div>
     </div>
+    <Footer/>
+    </>
   );
 }
