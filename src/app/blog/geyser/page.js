@@ -1,6 +1,6 @@
 "use client";
 import Link from "next/link";
-
+import Image from "next/image";
 export default function CardsPage() {
   const cards = [
     {
@@ -47,9 +47,11 @@ export default function CardsPage() {
             className="block"
           >
             <div className="bg-white rounded-2xl shadow-md overflow-hidden hover:shadow-lg transition cursor-pointer">
-              <img
+              <Image
                 src={card.image}
                 alt={card.title}
+                width={400}
+                height={224}
                 className="w-full h-56 object-cover"
               />
               <div className="p-6 flex flex-col justify-between h-full">

@@ -1,11 +1,11 @@
- 
+ import Image from "next/image";
 
 export default function Page() {
   return (
     <div className="min-h-screen bg-gray-100 py-12 px-6 lg:px-24">
       <div className="max-w-5xl mx-auto bg-white shadow-2xl rounded-3xl overflow-hidden">
         <div className="relative w-full h-96">
-          <img
+          <Image
             src="https://5.imimg.com/data5/SELLER/Default/2022/2/GE/JW/SY/25289616/front-loading-washing-machine-repair-service.png"
             alt="Washing Machine Repair"
             fill
@@ -22,7 +22,7 @@ export default function Page() {
 
           <div className="flex items-center gap-4 mb-8 text-sm text-gray-500">
             <div className="relative w-10 h-10">
-              <img
+              <Image
                 src="https://randomuser.me/api/portraits/women/44.jpg"
                 alt="Author"
                 fill

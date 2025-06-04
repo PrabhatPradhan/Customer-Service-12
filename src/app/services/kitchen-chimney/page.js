@@ -1,34 +1,22 @@
 "use client";
 
 import React, { useState } from "react";
- 
-// Move this array above the component
-const images = [
-  "https://5.imimg.com/data5/SELLER/Default/2021/1/XK/LR/PI/120736883/elisa-automatic-kitchen-chimney.jpg",
-];
+import Image from "next/image";
 
 export default function Page() {
-  const [selectedImage] = useState(null);
   const [isBookingOpen, setIsBookingOpen] = useState(false);
 
   const handleOpenBooking = () => setIsBookingOpen(true);
   const handleCloseBooking = () => setIsBookingOpen(false);
 
-  const companies = [
-    "NOKIA",
-    "ASUS",
-    "CASIO",
-    "DELL",
-    "Panasonic",
-    "VAIO",
-    "acer",
-  ];
-
+  const companies = ["NOKIA", "ASUS", "CASIO", "DELL", "Panasonic", "VAIO", "acer"];
   const phoneNumber = "+919999999999";
+
+  const productImage =
+    "https://5.imimg.com/data5/SELLER/Default/2021/1/XK/LR/PI/120736883/elisa-automatic-kitchen-chimney.jpg";
 
   return (
     <>
-      
       <br />
       <br />
 
@@ -79,9 +67,7 @@ export default function Page() {
       <div className="px-4 py-8 max-w-7xl mx-auto">
         <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-6">
           <div className="md:max-w-sm">
-            <h2 className="text-2xl font-bold text-gray-800">
-              Featured Categories
-            </h2>
+            <h2 className="text-2xl font-bold text-gray-800">Featured Categories</h2>
             <p className="text-gray-600">
               Choose your necessary products from this feature categories.
             </p>
@@ -90,10 +76,7 @@ export default function Page() {
           <div className="w-full md:w-[48rem] overflow-hidden bg-white py-4">
             <div className="flex gap-16 animate-scroll whitespace-nowrap text-gray-400 text-lg font-semibold">
               {companies.concat(companies).map((company, index) => (
-                <span
-                  key={index}
-                  className="min-w-fit hover:text-black transition"
-                >
+                <span key={index} className="min-w-fit hover:text-black transition">
                   {company}
                 </span>
               ))}
@@ -122,8 +105,8 @@ export default function Page() {
                 </p>
               </div>
               <div>
-                <img
-                  src="https://sparkenterprisesolution.in/wp-content/uploads/2024/07/1722401538331.jpg"
+                <Image
+                  src="https://plus.unsplash.com/premium_photo-1670527200668-ad4b53a1aefb?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
                   alt="Service Center"
                   width={200}
                   height={400}
@@ -152,9 +135,11 @@ export default function Page() {
       <div className="max-w-7xl mx-auto px-4 py-10 font-sans">
         <div className="grid md:grid-cols-2 gap-8">
           <div>
-            <img
-              src={selectedImage}
+            <Image
+              src={productImage}
               alt="Product Image"
+              width={400}
+              height={400}
               className="h-auto rounded shadow"
             />
           </div>
@@ -166,7 +151,8 @@ export default function Page() {
               100 | 228x254 cm | Multicolour
             </h1>
             <div className="mt-4 text-2xl font-bold text-green-700">
-              ₹349.00 <span className="text-sm line-through text-gray-500 ml-2">₹999</span>
+              ₹349.00{" "}
+              <span className="text-sm line-through text-gray-500 ml-2">₹999</span>
               <span className="text-orange-500 text-sm ml-2">65% off</span>
             </div>
 
@@ -178,11 +164,11 @@ export default function Page() {
               <h2 className="text-md font-semibold mb-2">Description</h2>
               <p className="text-sm text-gray-700">
                 Lorem ipsum dolor sit amet, consectetu g ectetu rus. Nulla
-                feugiat lectus a nisl fermentum, nec cursus erat vulputate. Donec
-                pulvinar, sapien sed imperdiet gravida, urna tortor pulvinar
-                neque, ut suscipit augue magna eget magna. Vestibulum tincidunt,
-                elit id bibendum hendrerit, turpis odio feugiat nulla, in congue
-                erat magna in augue.
+                feugiat lectus a nisl fermentum, nec cursus erat vulputate.
+                Donec pulvinar, sapien sed imperdiet gravida, urna tortor
+                pulvinar neque, ut suscipit augue magna eget magna. Vestibulum
+                tincidunt, elit id bibendum hendrerit, turpis odio feugiat
+                nulla, in congue erat magna in augue.
               </p>
             </div>
 
@@ -203,9 +189,6 @@ export default function Page() {
           </div>
         </div>
       </div>
-
-      
     </>
   );
 }
- 

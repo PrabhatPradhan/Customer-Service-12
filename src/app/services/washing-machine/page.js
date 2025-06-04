@@ -3,7 +3,7 @@ import React, { useState } from "react";
 import Navbar from "../../Componets/Navbar/Navbar";
 import StatsOfNumbers from "../../Componets/StatsOfNumbers/StatsOfNumbers";
 import Footer from "../../Componets/Footer/Footer";
-
+import Image from "next/image";
 export default function Page() {
   const [isBookingOpen, setIsBookingOpen] = useState(false);
 
@@ -119,8 +119,8 @@ export default function Page() {
                 </p>
               </div>
               <div>
-                <img
-                  src="https://media.croma.com/image/upload/v1655370905/Croma%20Assets/Large%20Appliances/Washers%20and%20Dryers/Images/253429_jx9ma4.png"
+                <Image
+                  src="https://images.unsplash.com/photo-1640685270311-49830c7a64e9?q=80&w=2127&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
                   alt="Service Center"
                   width={200}
                   height={400}
@@ -150,10 +150,12 @@ export default function Page() {
       <div className="max-w-7xl mx-auto px-4 py-10 font-sans">
         <div className="grid md:grid-cols-2 gap-8">
           <div>
-            <img
-              src="https://nandilathgmart.com/wp-content/uploads/2024/09/WHIRLPOOL-Stainwash-Pro-Plus-8.5kg-1.jpg"
+            <Image
+              src="https://images.unsplash.com/photo-1640685270311-49830c7a64e9?q=80&w=2127&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
               alt="Product Image"
-              className="h-auto rounded shadow"
+              width={600} // adjust as needed
+              height={400} // adjust as needed
+              className="rounded shadow"
             />
           </div>
 

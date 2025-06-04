@@ -3,6 +3,8 @@ import React from "react";
 import Navbar from "../../Componets/Navbar/Navbar";
 import StatsOfNumbers from "../../Componets/StatsOfNumbers/StatsOfNumbers";
 import Footer from "../../Componets/Footer/Footer";
+ 
+import Image from "next/image"
 
 // ✅ Just use a simple constant
 const selectedImage =
@@ -123,7 +125,7 @@ export default function Page() {
                 </p>
               </div>
               <div>
-                <img
+                <Image
                   src="https://images-cdn.ubuy.co.in/67d32049ad8f2367622995b0-midea-6-000-btu-115v-window-air.jpg"
                   alt="Service Center"
                   width={200}
@@ -154,10 +156,13 @@ export default function Page() {
       <div className="max-w-7xl mx-auto px-4 py-10 font-sans">
         <div className="grid md:grid-cols-2 gap-8">
           <div>
-            <img
+            <Image
               src={selectedImage}
               alt="Product Image"
+              width={500} // or set dynamically
+              height={500}
               className="h-auto rounded shadow"
+              unoptimized // optional if image is from an unsupported domain
             />
           </div>
 

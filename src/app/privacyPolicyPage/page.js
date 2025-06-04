@@ -4,7 +4,7 @@ import Navbar from "../Componets/Navbar/Navbar";
 import ServiceCenterCard from "../Componets/ServiceCenterCard/ServiceCenterCard";
 import Link from "next/link";
 import StatsOfNumbers from "../Componets/StatsOfNumbers/StatsOfNumbers";
-
+import Image from "next/image";
 export default function PrivacyPolicyPage() {
   return (
     <>
@@ -44,7 +44,7 @@ export default function PrivacyPolicyPage() {
             </p>
           </div>
           <div className="md:w-1/2 mt-10 md:mt-0 flex justify-center">
-            <img
+            <Image
               src="https://t4.ftcdn.net/jpg/06/28/95/19/360_F_628951920_Wpi0yQTeJ16NGVC37WkCOsRoDqTMxCqU.jpg"
               alt="Privacy document illustration"
               width={500}

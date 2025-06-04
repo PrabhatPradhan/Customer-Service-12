@@ -5,7 +5,7 @@ import Navbar from "../../Componets/Navbar/Navbar";
 import Link from "next/link";
 import Footer from "../../Componets/Footer/Footer";
 import StatsOfNumbers from "../../Componets/StatsOfNumbers/StatsOfNumbers";
-
+import Image from "next/image";
 const images = [
   { src: "https://i.ytimg.com/vi/_Ka4z6AfGdk/hq720.jpg?sqp=-oaymwEhCK4FEIIDSFryq4qpAxMIARUAAAAAGAElAADIQj0AgKJD&rs=AOn4CLDfb63FjqJ1cdR69wi6Mehb3QB2Gg", title: "Geyser Repair" },
   { src: "https://images.squarespace-cdn.com/content/v1/66ce80914c93ab213fa22503/80c99182-adff-467d-9c66-478375a84490/Refrigerator-Repair-1200x675-1.jpeg", title: "Refrigerator Repair" },
@@ -71,9 +71,11 @@ export default function Page() {
                 className="relative group overflow-hidden rounded-lg shadow-md cursor-pointer"
                 onClick={() => openModal(index)}
               >
-                <img
+                <Image
                   src={image.src}
                   alt={image.title}
+                  width={400}   // intrinsic width
+                  height={224} 
                   className="w-full h-56 object-cover transform group-hover:scale-110 transition duration-300 ease-in-out"
                 />
                 <div className="absolute inset-0 bg-black bg-opacity-40 opacity-0 group-hover:opacity-100 transition duration-300 flex items-center justify-center">

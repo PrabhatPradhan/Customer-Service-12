@@ -8,6 +8,7 @@ import {
   FaMapMarkerAlt,
   FaEnvelope,
 } from "react-icons/fa";
+import Image from "next/image";
 import Link from "next/link";
 
 export default function Footer() {
@@ -18,10 +19,12 @@ export default function Footer() {
         <div>
           {/* Logo */}
           <div className="flex items-center gap-2 mb-6">
-            <img
-              src="https://newtackserviceplatform.com/public/front/images//flogo.webp"
+            <Image
+              src="https://newtackserviceplatform.com/public/front/images/flogo.webp"
               alt="Fixhero Logo"
-              className="w-40 h-10"
+              width={160} // width matching w-40 (40 * 4px)
+              height={40} // height matching h-10 (10 * 4px)
+              className="object-contain"
             />
           </div>
 
@@ -168,27 +171,27 @@ export default function Footer() {
             Useful Information
           </h3>
           <ul className="space-y-2 text-gray-300">
-            <li><Link
-                href="/contact"
-                className="hover:text-white transition"
-              >
+            <li>
+              <Link href="/contact" className="hover:text-white transition">
                 Contact Us
-              </Link></li>
+              </Link>
+            </li>
             <li>Our Team</li>
             <li>Cost Calculator</li>
             <li>Testimonials</li>
             <li>Pricing Plan</li>
             <li>
-              <Link
-                href="/faq"
-                className="hover:text-white transition"
-              >
+              <Link href="/faq" className="hover:text-white transition">
                 Faq
               </Link>
             </li>
             <li>
-              <Link  href="/privacyPolicyPage"
-                className="hover:text-white transition">PrivacyPolicy</Link>
+              <Link
+                href="/privacyPolicyPage"
+                className="hover:text-white transition"
+              >
+                PrivacyPolicy
+              </Link>
             </li>
           </ul>
         </div>
@@ -223,8 +226,14 @@ export default function Footer() {
         <div className="space-x-4 mt-2 md:mt-0">
           <span>Sitemap</span>
           <span>•</span>
-          <span><Link  href="/privacyPolicyPage"
-                className="hover:text-white transition">PrivacyPolicy</Link></span>
+          <span>
+            <Link
+              href="/privacyPolicyPage"
+              className="hover:text-white transition"
+            >
+              PrivacyPolicy
+            </Link>
+          </span>
           <span>•</span>
           <span>Terms of use</span>
         </div>

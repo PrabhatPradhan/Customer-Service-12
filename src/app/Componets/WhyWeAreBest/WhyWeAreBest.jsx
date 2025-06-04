@@ -3,6 +3,7 @@ import "../WhyWeAreBest/WhyWeAreBest.css";
 import Link from "next/link";
 import InfiniteSlider from "../InfiniteSlider/InfiniteSlider";
 import { FiPhoneCall } from "react-icons/fi";
+import Image from "next/image";
 export default function WhyWeAreBest() {
   return (
     <>
@@ -130,9 +131,11 @@ export default function WhyWeAreBest() {
 
           {/* Right Visual Stats */}
           <div className="flex-1 flex flex-col lg:flex-row items-center gap-8">
-            <img
+            <Image
               src="https://www.ciccomputech.com/wp-content/uploads/2022/01/SmilyTech-500x773-1.png"
               alt="Repair Illustration"
+              width={500}
+              height={773}
               className="w-full max-w-sm md:max-w-xs lg:max-w-md h-auto"
             />
           </div>

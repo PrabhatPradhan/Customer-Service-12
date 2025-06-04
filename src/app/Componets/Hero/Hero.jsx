@@ -11,6 +11,7 @@ import {
   FaSink,
   FaWind,
 } from "react-icons/fa";
+import Image from "next/image";
 import { MdMicrowave } from "react-icons/md";
 const icons = [
   { Icon: FaSnowflake, label: "REFRIGERATOR", angle: -90 },
@@ -79,7 +80,7 @@ export default function Hero() {
             />
           </svg>
 
-          <img
+          <Image
             src="https://handyman.fixherotheme.com/wp-content/uploads/2023/09/man.png"
             alt="Repairman"
             width={260}

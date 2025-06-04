@@ -2,7 +2,7 @@
 
 import Link from "next/link";
  
-
+import Image from 'next/image';
 export default function CardsPage() {
   const cards = [
     {
@@ -44,7 +44,7 @@ export default function CardsPage() {
           <Link href={`/blog/blogdetels/${card.slug}/`} key={index} className="block">
             <div className="bg-white rounded-2xl shadow-md overflow-hidden hover:shadow-lg transition cursor-pointer">
               <div className="relative w-full h-56">
-                <img
+                <Image
                   src={card.image}
                   alt={card.title}
                   fill

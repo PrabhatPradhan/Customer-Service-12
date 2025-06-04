@@ -6,18 +6,20 @@ import EnquiryForm from "../Componets/EnquiryForm/EnquiryForm";
 import StatsOfNumbers from "../Componets/StatsOfNumbers/StatsOfNumbers";
 import "../about/about.css";
 import Link from "next/link";
+import Image from "next/image";
 import InfiniteSlider from '../Componets/InfiniteSlider/InfiniteSlider'
 import ServiceCenterCard from "../Componets/ServiceCenterCard/ServiceCenterCard";
+
 export default function Page() {
   return (
     <>
       <div className=" overflow-hidden">
-        <Navbar/>
-        <ServiceCenterCard/>
-        <EnquiryForm/>
+        <Navbar />
+        <ServiceCenterCard />
+        <EnquiryForm />
         <section
           style={{
-            backgroundImage: `url('https://images.unsplash.com/photo-1713557112617-e12d67bddc3a?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D')`, // Replace with actual image path or URL
+            backgroundImage: `url('https://images.unsplash.com/photo-1713557112617-e12d67bddc3a?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D')`,
             backgroundSize: "cover",
             backgroundPosition: "center",
           }}
@@ -59,10 +61,12 @@ export default function Page() {
               <div className="flex   sm:flex-row gap-6 mt-6">
                 {/* Stat 1 */}
                 <div className="flex items-center gap-3 transition-transform duration-300 hover:scale-105">
-                  <img
+                  <Image
                     src="https://cdn-icons-png.freepik.com/256/9540/9540741.png?semt=ais_hybrid"
                     alt="Worker Icon"
-                    className="w-10 h-10 transition-transform duration-300 hover:rotate-6"
+                    width={40}
+                    height={40}
+                    className="transition-transform duration-300 hover:rotate-6"
                   />
                   <div>
                     <p className="text-2xl font-bold text-green-800">250+</p>
@@ -72,10 +76,12 @@ export default function Page() {
 
                 {/* Stat 2 */}
                 <div className="flex items-center gap-3 transition-transform duration-300 hover:scale-105">
-                  <img
+                  <Image
                     src="https://cdn-icons-png.flaticon.com/512/9727/9727444.png"
                     alt="Experience Icon"
-                    className="w-10 h-10 transition-transform duration-300 hover:rotate-6"
+                    width={40}
+                    height={40}
+                    className="transition-transform duration-300 hover:rotate-6"
                   />
                   <div>
                     <p className="text-2xl font-bold text-green-800">
@@ -95,11 +101,13 @@ export default function Page() {
 
             {/* Right Side Image */}
             <div className="relative animate-fadeInUp">
-              <div className="relative z-10">
-                <img
+              <div className="relative z-10 rounded-md shadow-lg overflow-hidden" style={{ width: 600, height: 400 }}>
+                <Image
                   src="https://html.kodesolution.com/2023/airko-html/images/resource/about-1-1.jpg"
                   alt="AC Repair"
-                  className="rounded-md shadow-lg w-full h-auto"
+                  width={600}
+                  height={400}
+                  style={{ objectFit: "cover" }}
                 />
               </div>
               <div className="absolute top-4 left-4 w-full h-full border-[20px] border-blue-700 z-0 rounded-md"></div>
@@ -129,10 +137,12 @@ export default function Page() {
 
         <section className="relative bg-black text-white overflow-hidden">
           <div className="absolute inset-0">
-            <img
+            <Image
               src="https://img.freepik.com/free-photo/electrician-working-electric-car_53876-124171.jpg"
               alt="background"
-              className="w-full h-full object-cover opacity-30"
+              width={1200}
+              height={675}
+              className="object-cover opacity-30 w-full h-full"
             />
           </div>
 
@@ -214,27 +224,37 @@ export default function Page() {
                     </h4>
                     <p className="text-sm text-gray-600 mt-2">
                       Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                      Maiores harum velit doloremque molestias.
+                      Quasi, amet.
                     </p>
                   </div>
-                  <span className="text-orange-600 text-4xl sm:text-5xl font-bold">
-                    1<sup>st</sup>
-                  </span>
+                  <div className="w-12 h-12">
+                    <Image
+                      src="https://cdn-icons-png.flaticon.com/512/475/475661.png"
+                      alt="Appointment Icon"
+                      width={48}
+                      height={48}
+                    />
+                  </div>
                 </div>
 
                 {/* Step 2 */}
                 <div className="flex flex-col sm:flex-row sm:items-center gap-4">
-                  <span className="text-orange-600 text-4xl sm:text-5xl font-bold order-1 sm:order-none">
-                    2<sup>nd</sup>
-                  </span>
                   <div className="border p-4 shadow-sm flex-1 max-w-80 hover:shadow-2xl hover:scale-[1.03] hover:-translate-y-1 transform transition-all duration-300 ease-in-out">
                     <h4 className="text-base sm:text-lg font-semibold">
-                      Confirm for Services
+                      Fix Your Problem
                     </h4>
                     <p className="text-sm text-gray-600 mt-2">
                       Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                      Maiores harum velit doloremque molestias.
+                      Quasi, amet.
                     </p>
+                  </div>
+                  <div className="w-12 h-12">
+                    <Image
+                      src="https://cdn-icons-png.flaticon.com/512/2221/2221981.png"
+                      alt="Fix Problem Icon"
+                      width={48}
+                      height={48}
+                    />
                   </div>
                 </div>
 
@@ -242,56 +262,40 @@ export default function Page() {
                 <div className="flex flex-col sm:flex-row sm:items-center gap-4">
                   <div className="border p-4 shadow-sm flex-1 max-w-80 hover:shadow-2xl hover:scale-[1.03] hover:-translate-y-1 transform transition-all duration-300 ease-in-out">
                     <h4 className="text-base sm:text-lg font-semibold">
-                      Solve your Problem
+                      Payment Method
                     </h4>
                     <p className="text-sm text-gray-600 mt-2">
                       Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                      Maiores harum velit doloremque molestias.
+                      Quasi, amet.
                     </p>
                   </div>
-                  <span className="text-orange-600 text-4xl sm:text-5xl font-bold">
-                    3<sup>rd</sup>
-                  </span>
+                  <div className="w-12 h-12">
+                    <Image
+                      src="https://cdn-icons-png.flaticon.com/512/3580/3580332.png"
+                      alt="Payment Icon"
+                      width={48}
+                      height={48}
+                    />
+                  </div>
                 </div>
               </div>
 
-              {/* Right Side Image - Fully Right-Aligned */}
-              <div className="relative flex right-0 justify-end">
-                <img
+              {/* Right side Image */}
+              <div className="w-full max-w-lg mx-auto relative">
+                <Image
                   src="https://unicktheme.com/lsicool/assets/images/resources/work-v2-img1.png"
                   alt="Technician"
-                  className="w-[35rem]  ml-auto"
+                  width={560}
+                  height={400}
+                  className="ml-auto"
                 />
               </div>
             </div>
           </div>
         </section>
+
         <StatsOfNumbers />
-        <section className="py-6 mt-8 bg-white text-center">
-          <div className="mb-4 text-orange-600 font-semibold tracking-wide uppercase">
-            ✦ Partners ✦
-          </div>
-          <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-10">
-            Proudly Backed By Years of <br className="hidden md:block" />
-            Trusted Service
-          </h2>
-
-          {/* Logos Row */}
-             <InfiniteSlider />
-
-          {/* Keyframes for animation */}
-          <style>{`
-        @keyframes scrollRight {
-          0% {
-            transform: translateX(0%);
-          }
-          100% {
-            transform: translateX(-50%);
-          }
-        }
-      `}</style>
-        </section>
-
+        <InfiniteSlider />
         <Footer />
       </div>
     </>

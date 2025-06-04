@@ -1,6 +1,6 @@
 "use client";
 import Link from "next/link";
-
+import Image from "next/image"
 export default function ROWaterPurifierCards() {
   const cards = [
     {
@@ -42,9 +42,11 @@ export default function ROWaterPurifierCards() {
             key={index}
             className="bg-white rounded-2xl shadow-md overflow-hidden hover:shadow-lg transition"
           >
-            <img
+            <Image
               src={card.image}
               alt={card.title}
+              width={400}   // intrinsic width
+              height={224} 
               className="w-full h-56 object-cover"
             />
             <div className="p-6 flex flex-col justify-between h-full">

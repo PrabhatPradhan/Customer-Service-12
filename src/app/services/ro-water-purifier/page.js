@@ -3,6 +3,12 @@ import React, { useState } from "react";
 import Navbar from "../../Componets/Navbar/Navbar";
 import StatsOfNumbers from "../../Componets/StatsOfNumbers/StatsOfNumbers";
 import Footer from "../../Componets/Footer/Footer";
+import Image from "next/image";
+
+// Image array defined at the top
+const images = [
+  "https://shop.kent.co.in/cdn/shop/files/A_Info-Grand-Plus-New-W.png?v=1741241715",
+];
 
 export default function Page() {
   const [isBookingOpen, setIsBookingOpen] = useState(false);
@@ -10,15 +16,7 @@ export default function Page() {
   const handleOpenBooking = () => setIsBookingOpen(true);
   const handleCloseBooking = () => setIsBookingOpen(false);
 
-  const companies = [
-    "NOKIA",
-    "ASUS",
-    "CASIO",
-    "DELL",
-    "Panasonic",
-    "VAIO",
-    "acer",
-  ];
+  const companies = ["NOKIA", "ASUS", "CASIO", "DELL", "Panasonic", "VAIO", "acer"];
 
   return (
     <>
@@ -75,9 +73,7 @@ export default function Page() {
       <div className="px-4 py-8 max-w-7xl mx-auto">
         <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-6">
           <div className="md:max-w-sm">
-            <h2 className="text-2xl font-bold text-gray-800">
-              Featured Categories
-            </h2>
+            <h2 className="text-2xl font-bold text-gray-800">Featured Categories</h2>
             <p className="text-gray-600">
               Choose your necessary products from this feature categories.
             </p>
@@ -86,10 +82,7 @@ export default function Page() {
           <div className="w-full md:w-[48rem] overflow-hidden bg-white py-4">
             <div className="flex gap-16 animate-scroll whitespace-nowrap text-gray-400 text-lg font-semibold">
               {companies.concat(companies).map((company, index) => (
-                <span
-                  key={index}
-                  className="min-w-fit hover:text-black transition"
-                >
+                <span key={index} className="min-w-fit hover:text-black transition">
                   {company}
                 </span>
               ))}
@@ -119,8 +112,8 @@ export default function Page() {
                 </p>
               </div>
               <div>
-                <img
-                  src="https://darlingretail.com/cdn/shop/files/5_b5477f47-b73a-4a00-850e-5cce46575f36.jpg?v=1747286400"
+                <Image
+                  src="https://images.unsplash.com/photo-1719002906692-32dcef8010e7?q=80&w=2106&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
                   alt="Service Center"
                   width={200}
                   height={400}
@@ -149,11 +142,15 @@ export default function Page() {
       <div className="max-w-7xl mx-auto px-4 py-10 font-sans">
         <div className="grid md:grid-cols-2 gap-8">
           <div>
-            <img
-              src={images[0]} // directly use the image here
-              alt="Product Image"
-              className="h-auto rounded shadow"
-            />
+            {images[0] && (
+              <Image
+                src={images[0]}
+                alt="Product Image"
+                width={400}
+                height={400}
+                className="rounded shadow"
+              />
+            )}
           </div>
 
           <div>
@@ -177,12 +174,10 @@ export default function Page() {
             <div className="mt-6 border p-4 rounded">
               <h2 className="text-md font-semibold mb-2">Description</h2>
               <p className="text-sm text-gray-700">
-                Lorem ipsum dolor sit amet, consectetu g ectetu rus. Nulla
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla
                 feugiat lectus a nisl fermentum, nec cursus erat vulputate.
                 Donec pulvinar, sapien sed imperdiet gravida, urna tortor
-                pulvinar neque, ut suscipit augue magna eget magna. Vestibulum
-                tincidunt, elit id bibendum hendrerit, turpis odio feugiat
-                nulla, in congue erat magna in augue.
+                pulvinar neque, ut suscipit augue magna eget magna.
               </p>
             </div>
 
@@ -208,7 +203,3 @@ export default function Page() {
     </>
   );
 }
-
-const images = [
-  "https://shop.kent.co.in/cdn/shop/files/A_Info-Grand-Plus-New-W.png?v=1741241715",
-];

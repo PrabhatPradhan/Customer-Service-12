@@ -2,7 +2,7 @@
 import React, { useState, useEffect } from "react";
 import { MdEmojiPeople, MdStars, MdThumbUp } from "react-icons/md";
 import { FaPhoneAlt, FaEnvelope, FaWhatsapp, FaTimes } from "react-icons/fa";
-
+import Image from "next/image";
 export default function EnquiryForm() {
   const [show, setShow] = useState(false);
   const [comment, setComment] = useState("");
@@ -119,10 +119,13 @@ export default function EnquiryForm() {
             {/* Left Content */}
             <div className="space-y-6 bg-orange-100">
               <div className="overflow-hidden">
-                <img
+                <Image
                   src="https://files.yappe.in/place/full/authorised-samsung-service-center-sai-telecom-2791212.webp"
                   alt="Char Dham Yatra"
                   className="rounded-xl p-2"
+                  width={600} // Provide appropriate width
+                  height={400} // Provide appropriate height
+                  priority // optional, if you want it to load eagerly
                 />
               </div>
 

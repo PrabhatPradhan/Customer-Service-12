@@ -3,9 +3,10 @@ import React, { useState } from "react";
 import Navbar from "../../Componets/Navbar/Navbar";
 import StatsOfNumbers from "../../Componets/StatsOfNumbers/StatsOfNumbers";
 import Footer from "../../Componets/Footer/Footer";
-
+import Image from "next/image";
 export default function Page() {
-  const selectedImage = "https://havells.com/media/catalog/product/cache/844a913d283fe95e56e39582c5f2767b/g/l/gl43u4d2ef_front.jpg";
+  const selectedImage =
+    "https://images.unsplash.com/photo-1640685270311-49830c7a64e9?q=80&w=2127&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D";
   const [isBookingOpen, setIsBookingOpen] = useState(false);
 
   const handleOpenBooking = () => setIsBookingOpen(true);
@@ -120,8 +121,8 @@ export default function Page() {
                 </p>
               </div>
               <div>
-                <img
-                  src="https://media.istockphoto.com/id/1395191574/photo/black-led-tv-television-screen-blank-isolated.jpg?s=612x612&w=0&k=20&c=ps14JZJh0ebkINcbQyHFsR1J5EC7ozkj_WO7Fh_9IOI="
+                <Image
+                  src="https://images.unsplash.com/photo-1640685270311-49830c7a64e9?q=80&w=2127&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
                   alt="Service Center"
                   width={200}
                   height={400}
@@ -150,9 +151,11 @@ export default function Page() {
       <div className="max-w-7xl mx-auto px-4 py-10 font-sans">
         <div className="grid md:grid-cols-2 gap-8">
           <div>
-            <img
+            <Image
               src={selectedImage}
               alt="Product Image"
+              width={400} // example width, adjust as needed
+              height={400} // example height, adjust as needed
               className="h-auto rounded shadow"
             />
           </div>
